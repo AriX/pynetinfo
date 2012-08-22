@@ -18,9 +18,10 @@
 #    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 import netinfo
+
 for dev in netinfo.list_active_devs():
 	print "*********************************"
-	print dev
+	print "THIS IS THE DEVICE: "+dev
 	print "mac: "+netinfo.get_hwaddr(dev)
 	print "ip: "+netinfo.get_ip(dev)
 	print "netmask: "+netinfo.get_netmask(dev)

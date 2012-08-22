@@ -20,7 +20,8 @@
 from distutils.core import setup, Extension
 
 module1 = Extension('netinfo',
-                    sources = ['netinfo.c', 'iface.c', 'route.c'])
+                    sources = ['netinfo.c', 'iface.m', 'route.c'],
+                    extra_link_args = ["-framework", "Foundation", "-framework", "SystemConfiguration", "-lobjc"])
 setup (name = 'Pynetinfo',
        version = '0.2.2',
        description = 'python network information',
